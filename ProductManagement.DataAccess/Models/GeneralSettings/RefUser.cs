@@ -20,20 +20,14 @@ namespace ProductManagement.DataAccess.Models.GeneralSettings
         [Column("guid")]
         public Guid Guid { get; set; } = Guid.NewGuid();
 
-        [Required, StringLength(50)]
         [Column("name", TypeName = "varchar(50)")]
         public string Name { get; set; }
 
-        [Required, StringLength(10)]
         [Column("username", TypeName = "varchar(10)")]
         public string Username { get; set; }
-
-        [Required, EmailAddress, StringLength(50)]
         [Column("email")]
         public string Email { get; set; }
 
-
-        [Required]
         [Column("password")]
         public string Password { get; set; }
 
