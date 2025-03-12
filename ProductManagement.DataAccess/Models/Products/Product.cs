@@ -20,15 +20,12 @@ namespace ProductManagement.DataAccess.Models.Products
         [Column("guid")]
         public Guid Guid { get; set; } = Guid.NewGuid();
 
-        [Required, StringLength(50)]
         [Column("name", TypeName = "varchar(50)")]
         public string Name { get; set; }
 
-        [Required]
         [Column("description", TypeName = "text")]
         public string Description { get; set; }
 
-        [Required]
         [Column("price", TypeName = "decimal(17,2)")]
         public decimal Price { get; set; }
     }
